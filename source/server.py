@@ -8,7 +8,7 @@ credentials = {
     "level1": {"username": "user", "password": "827ccb0eea8a706c4c34a16891f84e7b"},
     "level2": {"username": "user", "password": "51558b48f53b70e63e6319214f1ff53b"}, 
     "level3": {"username": "7775d498c7c197bcc136ec9ff402a95a", "password": "794c9608409c8430986e8a067d4a2500"},
-    "level4": {"username": "21232f297a57a5a743894a0e4a801fc3", "password": "87abf592d10aa5e73f3d8e5628e8e3f5"},
+    "level4": {"username": "21232f297a57a5a743894a0e4a801fc3", "password": "c337ecf7de4e632f1fb839407afdab8a"},
 }
 
 class RequestHandler(BaseHTTPRequestHandler):
@@ -53,7 +53,7 @@ class RequestHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length).decode('utf-8')
-        print(post_data)
+        print(f'Trying to login with data: {post_data}')
         data = json.loads(post_data)
 
         # Extrae los datos del JSON

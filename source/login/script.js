@@ -28,7 +28,7 @@ document.getElementById('loginForm').onsubmit = async function (event) {
 
         // Redirigir al siguiente nivel, si hay más niveles
         const currentLevelNumber = parseInt(level.replace("level", ""));
-        if (currentLevelNumber < 5) {
+        if (currentLevelNumber < 4) {
             setTimeout(() => {
                 window.location.href = `level${currentLevelNumber + 1}.html`;
             }, 2000);
